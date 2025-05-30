@@ -62,7 +62,7 @@ def result():
     )
 
 @app.route('/download/<filename>')
-def download(filename):
+def download_file(filename):
     filepath = os.path.join(TEMP_FOLDER, filename)
     if os.path.exists(filepath):
         return send_file(filepath, as_attachment=True)
