@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Dice Sim - Home{% endblock %}
+{% block content %}
+  <h1>Dice Rolls Simulator</h1>
+  <form action="/result" method="POST">
+    Sets: <input type="number" name="sets" required><br>
+    Exponent (6^x): <input type="number" name="exponent" required><br>
+    <input type="submit" value="Simulate">
+  </form>
+{% endblock %}
