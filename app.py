@@ -53,10 +53,10 @@ def result():
 
     return render_template("result.html",
         sets=sets,
-        avg=overall_avg,
+        average=overall_avg,
         total_rolls=total_rolls,
-        duration=duration,
-        speed=speed,
+        duration=round(duration, 3),
+        speed=round(speed, 3),
         filename=filename,
         year=datetime.now().year
     )
