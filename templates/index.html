@@ -1,10 +1,16 @@
-{% extends "base.html" %}
-{% block title %}Dice Sim - Home{% endblock %}
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home - Dice Simulator{% endblock %}
+
 {% block content %}
-  <h1>Dice Rolls Simulator</h1>
-  <form action="/result" method="POST">
-    Sets: <input type="number" name="sets" required><br>
-    Exponent (6^x): <input type="number" name="exponent" required><br>
-    <input type="submit" value="Simulate">
-  </form>
+	<form action="/result" method="POST">
+		<label>Number of Sets:</label>
+		<input type="number" name="sets" required><br>
+
+		<label>Exponent (Rolls = 6^x):</label>
+		<input type="number" name="exponent" required><br>
+
+		<input type="submit" value="Simulate">
+	</form>
 {% endblock %}
