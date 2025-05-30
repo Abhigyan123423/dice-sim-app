@@ -53,7 +53,7 @@ def result():
 
     return render_template("result.html",
         sets=sets,
-        average=overall_avg,
+        average=round(overall_avg, 15),
         total_rolls=total_rolls,
         duration=round(duration, 3),
         speed=round(speed, 3),
