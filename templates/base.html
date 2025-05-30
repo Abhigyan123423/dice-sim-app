@@ -1,3 +1,22 @@
-{% block content %}{% endblock %}
-© {{ year }} Abhigyan Bag. All lefts reserved.
-Just kidding. You’re free to learn, break, and remake 🔥
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}Dice Simulator{% endblock %}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<header>
+		<h1>Dice Simulator 🎲</h1>
+	</header>
+
+	<main>
+		{% block content %}{% endblock %}
+	</main>
+
+	<footer>
+		<p>© 2025 Abhigyan Bag. No copyright, feel free to copy 😎</p>
+	</footer>
+</body>
+</html>
