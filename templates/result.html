@@ -1,11 +1,14 @@
-{% extends "base.html" %}
-{% block title %}Simulation Result{% endblock %}
+<!-- templates/result.html -->
+{% extends 'base.html' %}
+
+{% block title %}Result - Dice Simulator{% endblock %}
+
 {% block content %}
-  <h2>✅ Simulation Complete!</h2>
-  <p>• Average (real): {{ avg }}</p>
-  <p>• Total Rolls: {{ total_rolls }}</p>
-  <p>• Time taken: {{ duration }} seconds</p>
-  <p>• Speed: {{ speed }} eq/s</p>
-  <a href="{{ url_for('download', filename=filename) }}">📥 Click Here To Download Excel File</a><br><br>
-  <p id="timer" style="color:red; font-weight:bold;"></p>
+	<h2>✅ Simulation Complete!</h2>
+	<p><strong>Average of all {{ sets }} sets:</strong> {{ average }}</p>
+	<p><strong>Total rolls:</strong> {{ total_rolls }}</p>
+	<p><strong>Time taken:</strong> {{ duration }} seconds</p>
+	<p><strong>Equations per second:</strong> {{ speed }} eq/s</p>
+
+	<a href="{{ url_for('download_file', filename=filename) }}">📥 Download Excel Report</a>
 {% endblock %}
