@@ -71,15 +71,15 @@ def download_file(filename):
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('About.html')
 
 @app.route('/privacy')
 def privacy():
-    return render_template('privacy.html')
+    return render_template('Privacy.html')
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    return render_template('Contact.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=False)
