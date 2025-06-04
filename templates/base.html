@@ -2,21 +2,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>{% block title %}Dice Simulator{% endblock %}</title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <title>{% block title %}Dice Simulator{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-	<header>
-		<h1>Dice Simulator 🎲</h1>
-	</header>
 
-	<main>
-		{% block content %}{% endblock %}
-	</main>
+  <header>
+    <h1>🎲 Dice Simulator</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
 
-	<footer>
-		<p>© 2025 Abhigyan Bag. just kidding No copyright, feel free to copy 😎</p>
-	</footer>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>© 2025 Abhigyan Bag — Powered by Python & Flask</p>
+  </footer>
+
 </body>
 </html>
